@@ -11,7 +11,7 @@ DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./test.db")
 print("DATABASE_URL:", os.getenv("DATABASE_URL"))
 
 engine = create_engine(
-    "sqlite:///./test.db")
+    DATABASE_URL)
 
 SessionLocal = sessionmaker(
     autocommit=False,
