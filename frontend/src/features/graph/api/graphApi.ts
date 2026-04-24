@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8000"
+const API_URL = import.meta.env.VITE_API_URL
 
 // 🧍 GET personas
 export async function fetchPersons() {
@@ -88,7 +88,7 @@ export async function updatePersonName(id: string, name: string) {
 }
 
 export async function deletePerson(id: string) {
-  const res = await fetch(`http://localhost:8000/persons/${id}`, {
+  const res = await fetch(`${API_URL}/persons/${id}`, {
     method: "DELETE"
   })
 
@@ -96,7 +96,7 @@ export async function deletePerson(id: string) {
 }
 
 export async function deleteRelation(id: string) {
-  const res = await fetch(`http://localhost:8000/relations/${id}`, {
+  const res = await fetch(`${API_URL}/relations/${id}`, {
     method: "DELETE"
   })
 
