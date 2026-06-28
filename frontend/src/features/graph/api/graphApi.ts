@@ -1,20 +1,17 @@
-const API_URL = import.meta.env.VITE_API_URL
+const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:8000"
 
-// 🧍 GET personas
 export async function fetchPersons() {
   const res = await fetch(`${API_URL}/persons`)
   if (!res.ok) throw new Error("Error fetching persons")
   return res.json()
 }
 
-// 🔗 GET relaciones
 export async function fetchRelations() {
   const res = await fetch(`${API_URL}/relations`)
   if (!res.ok) throw new Error("Error fetching relations")
   return res.json()
 }
 
-// ➕ POST persona
 export async function createPerson(
   name: string,
   x: number,
@@ -35,7 +32,6 @@ export async function createPerson(
   return res.json()
 }
 
-// 🔗 POST relación
 export async function createRelation(
   person1_id: number,
   person2_id: number,
@@ -56,7 +52,6 @@ export async function createRelation(
   return res.json()
 }
 
-// 📍 PUT posición
 export async function updatePersonPosition(
   id: string,
   x: number,
