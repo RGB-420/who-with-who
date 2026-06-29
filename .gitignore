@@ -13,3 +13,5 @@ dist-ssr/
 
 *.log
 test.db
+
+nginx_dev/
