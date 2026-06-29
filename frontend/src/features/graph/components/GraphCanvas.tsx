@@ -211,8 +211,7 @@ export default function GraphCanvas() {
           <div className="rounded-lg border border-white/70 bg-white/95 p-3 shadow-2xl shadow-slate-900/15 backdrop-blur">
             <div className="mb-3 flex items-center justify-between gap-3">
               <div className="min-w-0">
-                <p className="truncate text-sm font-bold text-slate-950">{selectedNodeName}</p>
-                <p className="text-xs font-medium text-slate-500">Persona seleccionada</p>
+                <p className="truncate text-lg font-bold text-slate-950">{selectedNodeName}</p>
               </div>
               <button
                 aria-label="Cerrar panel de persona"
@@ -231,7 +230,6 @@ export default function GraphCanvas() {
                 type="button"
               >
                 <Pencil size={16} />
-                <span>Cambiar nombre</span>
               </button>
 
               <button
@@ -243,7 +241,6 @@ export default function GraphCanvas() {
                 type="button"
               >
                 <Trash2 size={16} />
-                <span>Eliminar</span>
               </button>
             </div>
           </div>
